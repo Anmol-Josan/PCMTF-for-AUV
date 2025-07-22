@@ -1,4 +1,4 @@
-# 🌊 PCMTF for AUV - Interactive Simulation
+# PCMTF for AUV - Interactive Simulation
 
 **Physics-Constrained Meta-Transformer Framework for AUV Plume Tracking in Turbulent Ocean Environments**
 
@@ -6,7 +6,7 @@ An advanced interactive web-based simulation for autonomous underwater vehicle (
 
 ![AUV Simulation Interface](https://github.com/user-attachments/assets/81f793ee-2af3-4866-9d55-fc7f9ce57181)
 
-## 🚀 Features
+## Features
 
 - **Interactive Web Interface**: Beautiful, responsive web-based simulation control panel
 - **Physics-Informed Neural Network (PINN)**: Learns turbulent plume dynamics from sparse sensor data
@@ -15,7 +15,7 @@ An advanced interactive web-based simulation for autonomous underwater vehicle (
 - **Turbulent Plume Simulation**: Realistic plume dynamics with fragmentation, drift, and noise
 - **Responsive Controls**: Start/stop simulation, single-step execution, and parameter adjustment
 
-## 🎯 Simulation Objectives
+## Simulation Objectives
 
 The AUV must:
 1. **Locate methane plumes** in a turbulent ocean environment
@@ -23,7 +23,7 @@ The AUV must:
 3. **Optimize energy consumption** while maintaining effective coverage
 4. **Adapt to changing conditions** through continuous learning
 
-## 🧠 Technical Approach
+## Technical Approach
 
 ### Physics-Informed Neural Network (PINN)
 - Incorporates Navier-Stokes equations as soft constraints
@@ -40,7 +40,7 @@ The AUV must:
 - Fragmentation effects simulating high Reynolds number turbulence
 - Realistic flow fields with vortex patterns and noise
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 ```bash
@@ -62,12 +62,12 @@ python3 app.py
 # http://localhost:5000
 ```
 
-## 🎮 How to Use
+## How to Use
 
 ![Simulation Running](https://github.com/user-attachments/assets/60a11a0c-28aa-4b7d-bf37-4c36583605fe)
 
 1. **Set Starting Position**: Adjust AUV Start X and Y coordinates (0-100)
-2. **Start Simulation**: Click "🚀 Start Simulation" to initialize
+2. **Start Simulation**: Click "Start Simulation" to initialize
 3. **Control Execution**:
    - **Single Step**: Execute one simulation step at a time
    - **Run 5 Steps**: Execute multiple steps automatically
@@ -80,7 +80,7 @@ python3 app.py
 - **Sensors**: Number of measurements collected
 - **Energy Bar**: Visual energy level indicator (green → yellow → red)
 
-## 📊 Visualizations
+## Visualizations
 
 The interface provides three main visualization areas:
 
@@ -93,7 +93,7 @@ The interface provides three main visualization areas:
    - Energy consumption over time
    - Concentration readings history
 
-## 🏗️ Architecture
+## Architecture
 
 ### Core Components
 
@@ -123,7 +123,7 @@ The interface provides three main visualization areas:
 - `GET /api/get_state` - Get simulation state
 - `POST /api/set_auv_position` - Manually set AUV position
 
-## 🔬 Scientific Background
+## Scientific Background
 
 This simulation implements cutting-edge research in:
 
@@ -132,7 +132,7 @@ This simulation implements cutting-edge research in:
 - **Turbulent Flow Modeling**: Realistic simulation of ocean turbulence effects
 - **Multi-Objective Optimization**: Balancing exploration and energy conservation
 
-## 🚧 Future Enhancements
+## Future Enhancements
 
 - **3D Environment**: Extend to full 3D plume tracking
 - **Multi-AUV Coordination**: Cooperative swarm behavior
@@ -140,7 +140,7 @@ This simulation implements cutting-edge research in:
 - **Real Sensor Integration**: Connect to actual AUV hardware
 - **Machine Learning Improvements**: Enhanced learning algorithms
 
-## 📝 Technical Details
+## Technical Details
 
 ### Plume Dynamics Model
 ```python
@@ -163,7 +163,7 @@ residual = u·∇C + v·∇C - D·∇²C
 physics_loss = mean(residual²)
 ```
 
-## 🤝 Contributing
+## Contributing
 
 This project welcomes contributions! Areas for improvement:
 - Enhanced visualization features
@@ -171,7 +171,7 @@ This project welcomes contributions! Areas for improvement:
 - Additional optimization algorithms
 - Performance improvements
 
-## 📄 License
+## License
 
 This project is part of ongoing research in autonomous ocean exploration and physics-informed machine learning.
 

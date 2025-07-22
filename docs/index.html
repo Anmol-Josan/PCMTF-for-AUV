@@ -1,11 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AUV Plume Tracking Simulation</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="simulation.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -20,16 +23,12 @@
                 <div class="control-group">
                     <label for="start-x">AUV Start X:</label>
                     <input type="number" id="start-x" min="0" max="100" value="20" step="1">
-                    
                     <label for="start-y">AUV Start Y:</label>
                     <input type="number" id="start-y" min="0" max="100" value="20" step="1">
                 </div>
-                
                 <div class="button-group">
-                    <button id="start-btn" class="btn btn-primary">Start Simulation</button>
-                    <button id="step-btn" class="btn btn-secondary" disabled>⏭ Single Step</button>
-                    <button id="run-btn" class="btn btn-success" disabled>▶ Run 5 Steps</button>
-                    <button id="reset-btn" class="btn btn-warning">Reset</button>
+                    <button onclick="trainPINN()" class="btn btn-primary">Train PINN</button>
+                    <button onclick="plotPlumeField()" class="btn btn-success">Plot Plume Field</button>
                 </div>
             </div>
 
@@ -53,7 +52,6 @@
                         <span id="sensor-count">-</span>
                     </div>
                 </div>
-                
                 <div class="energy-bar">
                     <div class="energy-fill" id="energy-fill"></div>
                 </div>
@@ -65,7 +63,6 @@
                 <h3>Plume Field & AUV Trajectory</h3>
                 <div id="main-plot" class="plot"></div>
             </div>
-            
             <div class="metrics-container">
                 <h3>Performance Metrics</h3>
                 <div id="energy-plot" class="plot small-plot"></div>
@@ -99,7 +96,5 @@
     <footer>
         <p>&copy; 2024 Physics-Constrained Meta-Transformer Framework | AUV Plume Tracking Research</p>
     </footer>
-
-    <script src="static/js/simulation.js"></script>
 </body>
 </html>
