@@ -19,7 +19,7 @@
 
         <div class="control-panel">
             <div class="controls-section">
-                <h3>🎮 Simulation Controls</h3>
+                <h3>Simulation Controls</h3>
                 <div class="control-group">
                     <label for="start-x">AUV Start X:</label>
                     <input type="number" id="start-x" min="0" max="100" value="20" step="1">
@@ -29,6 +29,8 @@
                 <div class="button-group">
                     <button onclick="trainPINN()" class="btn btn-primary">Train PINN</button>
                     <button onclick="plotPlumeField()" class="btn btn-success">Plot Plume Field</button>
+                    <button onclick="randomizeField()" class="btn btn-warning">Randomize Field</button>
+                    <button onclick="runSimulation()" class="btn btn-info">Run Simulation</button>
                 </div>
             </div>
 
